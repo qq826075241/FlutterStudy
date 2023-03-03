@@ -3,7 +3,7 @@ import 'package:flutterstudy_hkzf/routes/routes.dart';
 
 class PageContent extends StatelessWidget {
   final String name;
-  PageContent({Key? key, required this.name}) : super(key: key);
+  const PageContent({Key? key, required this.name}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +15,12 @@ class PageContent extends StatelessWidget {
         },),
         TextButton(child: Text(Routes.login), onPressed: () {
           Navigator.pushNamed(context, Routes.login);
+        },),
+        TextButton(child: const Text('不存在的页面'), onPressed: () {
+          Navigator.pushNamed(context, '/aaaa');
+        },),
+        TextButton(child: const Text('房屋详情页，id：123'), onPressed: () {
+          Navigator.pushNamed(context, '/room/123');
         },),
       ],),
     );

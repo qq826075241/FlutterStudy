@@ -6,9 +6,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: PageContent(name: "首页",),
-
-    );
+    return const PageContent(name: "首页",);
   }
 }

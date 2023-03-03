@@ -13,7 +13,10 @@ class Application extends StatelessWidget {
      Routes.configureRoutes(router);
 
     return MaterialApp(
-      home: HomePage(),
+      theme: ThemeData(
+        primaryColor: Colors.green,
+        colorScheme: const ColorScheme.light().copyWith(primary: Colors.green),
+      ),
       onGenerateRoute: router.generator,
     );
   }
