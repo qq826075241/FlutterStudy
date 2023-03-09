@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper_null_safety_flutter3/flutter_swiper_null_safety_flutter3.dart';
+import 'package:flutterstudy_hkzf/widgets/common_image.dart';
 
 const List <String> defaultImages = [
   'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F201507%2F11%2F20150711172552_CE55z.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1680854837&t=8512fe5d27fbe2778a7d52e062d2533b',
@@ -24,7 +25,8 @@ class CommonSwipper extends StatelessWidget {
       child: Swiper(
         autoplay: true,
         itemBuilder: (BuildContext context,int index){
-          return Image.network(images[index],fit: BoxFit.fill,);
+          return CommonImage(src: images[index], width: imageWidth, height: imageHeight, fit: BoxFit.fill);
+          // return Image.network(images[index],fit: BoxFit.fill,);
         },
         itemCount: images.length,
         pagination: const SwiperPagination(),
