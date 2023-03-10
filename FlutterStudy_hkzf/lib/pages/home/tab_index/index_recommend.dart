@@ -23,6 +23,7 @@ class IndexRecommend extends StatelessWidget {
           ),
           const Padding(padding: EdgeInsets.all(5)),
           Wrap(
+            alignment: WrapAlignment.center,
             spacing: 10.0,
             runSpacing: 10.0,
             children:

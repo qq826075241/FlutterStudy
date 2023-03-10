@@ -12,14 +12,18 @@ class IndexRecommendItemWidget extends StatelessWidget {
       onTap: () {
         Navigator.of(context).pushNamed(data.navigateUrl);
       },
-      child: Row(children: <Widget> [
-        Column(children: <Widget> [
-          Text(data.title),
-          Text(data.subTitle),
+      child: Container(
+        width: (MediaQuery.of(context).size.width) / 2.3,
+        height: 90.0,
+        child: Row(children: <Widget> [
+          Column(children: <Widget> [
+            Text(data.title),
+            Text(data.subTitle),
+          ],),
+          CommonImage(src: data
+          .imageUrl, fit: BoxFit.fill)
         ],),
-        CommonImage(src: data
-        .imageUrl, width: 100, height: 100, fit: BoxFit.fill)
-      ],),
+      ),
     );
   }
 }

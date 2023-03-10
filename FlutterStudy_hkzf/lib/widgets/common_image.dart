@@ -7,11 +7,11 @@ final localUriReg = RegExp('^static');
 class CommonImage extends StatelessWidget {
 
   final String src;
-  final double width;
-  final double height;
+  final double? width;
+  final double? height;
   final BoxFit fit;
 
-  const CommonImage({super.key, required this.src, required this.width, required this.height, required this.fit});
+  const CommonImage({super.key, required this.src, this.width, this.height, required this.fit});
 
   @override
   Widget build(BuildContext context) {
