@@ -9,9 +9,9 @@ class CommonImage extends StatelessWidget {
   final String src;
   final double? width;
   final double? height;
-  final BoxFit fit;
+  final BoxFit? fit;
 
-  const CommonImage({super.key, required this.src, this.width, this.height, required this.fit});
+  const CommonImage({super.key, required this.src, this.width, this.height, this.fit});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class CommonImage extends StatelessWidget {
       return CachedNetworkImage(
         width: width,
         height: height,
-        fit: fit,
+        fit: fit ?? BoxFit.fill,
         imageUrl: src,
         placeholder: (context, url) => const CircularProgressIndicator(),
         errorWidget: (context, url, error) => const Icon(Icons.error),

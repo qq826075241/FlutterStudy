@@ -13,15 +13,17 @@ class IndexRecommendItemWidget extends StatelessWidget {
         Navigator.of(context).pushNamed(data.navigateUrl);
       },
       child: Container(
+        decoration: const BoxDecoration(color: Colors.white),
         width: (MediaQuery.of(context).size.width) / 2.3,
-        height: 90.0,
-        child: Row(children: <Widget> [
+        padding: const EdgeInsets.all(10.0),
+        child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget> [
           Column(children: <Widget> [
             Text(data.title),
             Text(data.subTitle),
           ],),
-          CommonImage(src: data
-          .imageUrl, fit: BoxFit.fill)
+          CommonImage(src: data.imageUrl, width: 55.0, height: 55.0),
         ],),
       ),
     );
