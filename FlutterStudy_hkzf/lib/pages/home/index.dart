@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutterstudy_hkzf/pages/home/tab_index/index.dart';
+import 'package:flutterstudy_hkzf/pages/home/tab_info/index.dart';
 import 'package:flutterstudy_hkzf/widgets/page_content.dart';
 
 
 List <Widget> tabViewlist = [
   const TabIndex(),
   const PageContent(name: '搜索'),
-  const PageContent(name: '资讯'),
+  const TabInfo(),
   const PageContent(name: '我的'),
 ];
 

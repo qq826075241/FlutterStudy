@@ -10,7 +10,7 @@ class TabIndex extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('首页', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w600),),),
+      appBar: AppBar(title: const Text('首页'),),
       body: ListView(children: const <Widget> [
         CommonSwipper(),
         IndexNavigator(),

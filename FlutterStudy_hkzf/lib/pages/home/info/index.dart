@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterstudy_hkzf/pages/home/info/item_widget.dart';
 import 'data.dart';
 
 class Info extends StatelessWidget {
@@ -9,19 +10,6 @@ class Info extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(children: <Widget> [
-        Container(
-          alignment: Alignment.centerLeft,
-          padding: const EdgeInsets.all(10.0),
-          child: const Text('最新资讯', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w600),)),
-        Column(children: dataList!.map((item) => Container(
-          height: 100,
-          margin: EdgeInsets.only(bottom: 10.0),
-          decoration: const BoxDecoration(color: Colors.red),
-        )).toList(),),
-      ],),
-      
-    );
+    return Column(children: dataList!.map((item) =>ItemWidget(data: item)).toList(),);
   }
 }

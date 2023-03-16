@@ -14,9 +14,9 @@ class IndexRecommend extends StatelessWidget {
       decoration: const BoxDecoration(color: Color(0x08000000)),
       child: Column(
         children: <Widget>[
-          const Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
+            children: const <Widget>[
               Text('房屋推荐', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w600),),
               Text('更多', style: TextStyle(color: Colors.black54,),),
             ],
