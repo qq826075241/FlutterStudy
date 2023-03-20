@@ -31,7 +31,7 @@ class _SearchBarState extends State<SearchBar> {
                 onTap: () {
             
                 },
-                child: Row(children: const <Widget> [
+                child: const Row(children:  <Widget> [
                   Icon(Icons.room, color: Colors.green, size: 16.0,),
                   Text('北京', style: TextStyle(color: Colors.black, fontSize: 14.0),),
                 ],),
@@ -45,11 +45,25 @@ class _SearchBarState extends State<SearchBar> {
                 child: const Icon(Icons.chevron_left, color: Colors.black87, size: 16.0,),
               ),
             ),
-          const Expanded(
-            child: Padding(
-              padding: EdgeInsets.only(right: 10.0),
-              child: TextField(
-                decoration: InputDecoration(hintText: '请输入搜索词'),
+          Expanded(
+            child: Container(
+              height: 34.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(17.0), 
+                color: Colors.grey[200]),
+              padding: const EdgeInsets.only(right: 10.0),
+              child: const TextField(
+                decoration: InputDecoration(
+                  suffixIcon: Icon(Icons.clear, size: 18.0, color: Colors.grey,),
+                  icon: Padding(
+                    padding: EdgeInsets.only(left: 8.0),
+                    child: Icon(Icons.search, size: 18.0, color: Colors.grey,),
+                  ),
+                  border: InputBorder.none,
+                  hintText: '请输入搜索词',
+                  hintStyle: TextStyle(color: Colors.grey, fontSize: 14.0),
+                  //contentPadding:EdgeInsets.only(left: -10.0),
+                ), 
               ),
             ),
           ),
